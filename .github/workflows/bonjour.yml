@@ -5,7 +5,6 @@ jobs:
   dire_bonjour:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v4 
-      - run: sudo apt-get update && sudo apt-get install --yes cowsay
-      - run: ls -l 
-      - run: cat README.md | cowsay
+      - uses: actions/checkout@v4
+      - run: npm install
+      - run: npm run lint
